@@ -5,9 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Dogs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Welcome to Random Dogs</h1>
     
+    <span id="error"></span>
+
+    <div class="container">
+        <section id="randomDogs">
+            <h2>Random Dogs</h2>
+    
+            <article>
+                <img id="img1"  alt="cat's photo">
+                <button id="btn1" onclick="saveFavouriteMichi()">save dog in favorites</button>
+            </article>
+            
+            <article>
+                <img id="img2"  alt="cat's photo">
+                <button id="btn2" onclick="saveFavouriteMichi()">save dog in favorites</button>
+            </article>
+    
+           
+    
+            <button onclick="loadRandomMichis()">get a random dog</button>
+        </section>
+    
+    
+        <section id="uploadingMichi">
+            <h2>Sube la foto de tu michi</h2>
+    
+            <form id="uploadingForm">
+                <input id="file" type="file" name="file">
+                <button type="button" onclick="uploadMichiPhoto()">Subir foto de michi</button>
+            </form>
+        </section>
+    
+        <section id="favoriteMichis">
+            <h2>michis favoritos</h2>
+            <article>
+                <img id="img4"  alt="cat's photo">
+                <button>Sacar al michi de favoritos</button>
+            </article>
+    
+            
+        </section>
+
+
+    </div>
+    
+
+    
+
+
+    
+
+    
+
+
+    <script src="./main.js"></script>
 </body>
 </html>
