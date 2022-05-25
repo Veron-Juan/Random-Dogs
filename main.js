@@ -58,10 +58,10 @@ async function loadFavouriteMichis() {
     else {
         const section = document.getElementById('favoriteMichis')
         section.innerHTML = '';
-        const h2 = document.createElement('h2');
-        const h2Text = document.createTextNode('Michis favoritos');
-        h2.appendChild(h2Text);
-        section.appendChild(h2)
+        // const h2 = document.createElement('h2');
+        // const h2Text = document.createTextNode('Michis favoritos');
+        // h2.appendChild(h2Text);
+        // section.appendChild(h2)
 
         data.forEach(michi => {                                                  //cada uno de "michis" es un objeto dentro del dom data, x ejemplo "image", que dentro tiene la url, un id etc(el michi hace referencia al objeto)
             
