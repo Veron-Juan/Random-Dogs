@@ -1,15 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 
-.container{
+html {
+    font-size: 62.5%;
+}
+
+img{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    
-    
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 35px;
     
 }
 
 
 
+
+
+.aaa{
+    display: flex;
+    border: 1px solid green;
+    gap: 20px;
+    justify-content: center;
+}
 
 
 #randomDogs{
