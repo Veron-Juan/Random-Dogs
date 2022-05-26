@@ -210,12 +210,64 @@ img{
 
 
 #uploadingMichi {
-    border: 1px solid red;
+    height: 400px;
     margin: 50px;
     display: flex;
     flex-direction: column;
+    background-color: var(--colorA);
+    border-radius: 20px;
+    
 }
 
+#uploadingMichi:hover{
+    background-color: #2D5A79;
+    transition: .6s;
+}
+
+#uploadingMichi h2{
+    font-weight: 800;
+}
+
+#uploadingMichi h3{
+    margin: 10px;
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+#uploadingMichi img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+#uploadingForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 400px;
+    
+}
+
+
+
+#uploadingForm input{
+    margin-top: 10px;
+}
+
+
+
+#uploadingForm button{
+    
+    background-color: var(--colorD);
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin: 2px 5px;
+    
+    
+    
+}
 
 #favoriteMichis{
     margin: 10px;
