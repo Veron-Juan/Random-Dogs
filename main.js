@@ -68,7 +68,7 @@ async function loadFavouriteMichis() {
             const article = document.createElement('article');
             const img = document.createElement('img');
             const btn = document.createElement('button');
-            const btnText = document.createTextNode('Sacar al michi de favoritos');
+            const btnText = document.createTextNode('🗑');
 
             img.src = michi.image.url
             btn.appendChild(btnText);

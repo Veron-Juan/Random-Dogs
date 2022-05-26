@@ -117,8 +117,8 @@ section h2{
 
 img{
     
-    height: 250px;
-    width: 250px;
+    height: 320px;
+    width: 320px;
     margin: 0 auto;
     
 }
@@ -237,6 +237,8 @@ img{
     border-radius: 10px;
     width: 200px;
     height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
 }
 
 #uploadingForm{
@@ -264,9 +266,21 @@ img{
     margin-bottom: 10px;
     font-weight: 700;
     margin: 2px 5px;
+    cursor: pointer;
     
     
     
+}
+
+#uploadingForm button:hover{
+    background-color: #CF4538;
+}
+
+
+
+.sect-favorites{
+    font-size: 5.6rem;
+    text-align: center;
 }
 
 #favoriteMichis{
@@ -277,6 +291,41 @@ img{
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 	grid-auto-rows: auto;
-    border: 1px solid black;
+    background-image: url(https://previews.123rf.com/images/evgeniyam/evgeniyam1710/evgeniyam171000147/88063542-un-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-azul-.jpg?fj=1);
+    border-radius: 25px;
+    border: 3px solid black;
+    
+    
 }
 
+#favoriteMichis img{
+    border-radius: 10px;
+    border: 4px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#favoriteMichis article{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#favoriteMichis article button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 2.6rem;
+    color: white;
+    background-color: var(--colorA);
+    position: absolute;
+    margin-left: 415px;
+    margin-top: 260px;
+    cursor: pointer;
+
+}
+
+#favoriteMichis article button:hover{
+    background-color: var(--colorD);
+    color: white;
+    
+}
