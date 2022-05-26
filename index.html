@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Dogs</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&family=Roboto:ital,wght@0,100;1,400&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Random Dogs</h1>
+    <header>
+        <div class="portfolio">
+            <a href="#"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/7124/7124691.png" alt=""></a>
+            <p class="text-pf">PORTFOLIO</p>
+        </div>
+        
+        <h1>Welcome to Random Dogs🐶</h1>
+
+
+        <div>asddas</div>
+    </header>
+    
     
     <span id="error"></span>
 
@@ -19,29 +33,24 @@
             <article class="aaa">
                 <div class="bbb">
                     <img id="img1"  alt="cat's photo">
-                    <button id="btn1" onclick="saveFavouriteMichi()">save dog in favorites</button>
+                    <button id="btn1" onclick="saveFavouriteMichi()">Save dog in favorites</button>
                 </div>
 
                 <div class="bbb">
                     <img id="img2"  alt="cat's photo">
-                    <button id="btn2" onclick="saveFavouriteMichi()">save dog in favorites</button>
+                    <button id="btn2" onclick="saveFavouriteMichi()">Save dog in favorites</button>
                 </div>
 
                 <div class="bbb">
                     <img id="img3"  alt="cat's photo">
-                    <button id="btn3" onclick="saveFavouriteMichi()">save dog in favorites</button>
+                    <button id="btn3" onclick="saveFavouriteMichi()">Save dog in favorites</button>
                 </div>
 
 
                 <div class="bbb">
                     <img id="img4"  alt="cat's photo">
-                    <button id="btn4" onclick="saveFavouriteMichi()">save dog in favorites</button>
+                    <button id="btn4" onclick="saveFavouriteMichi()">Save dog in favorites</button>
                 </div>
-                
-            
-            
-                
-
                 
 
 
@@ -51,17 +60,17 @@
     
            
     
-            <button class="getrandom" onclick="loadRandomMichis()">get a random dog</button>
+        <button class="getrandom" onclick="loadRandomMichis()">Show more dogs</button>
         </section>
     
     
         <section id="uploadingMichi">
-            <h2>Sube la foto de tu michi</h2>
-            <h3>Sube una foto de tu perro y aparecerá en la seccion de favoritos</h3>
+            <h2>Upload a picture of your dog</h2>
+            <h3>Upload a picture of your dog and you can see it in the favorites section </h3>
     
             <form id="uploadingForm">
                 <input id="file" type="file" name="file">
-                <button type="button" onclick="uploadMichiPhoto()">Subir foto de michi</button>
+                <button type="button" onclick="uploadMichiPhoto()">upload photo</button>
             </form>
         </section>
     
