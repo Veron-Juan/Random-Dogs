@@ -161,14 +161,13 @@ async function uploadMichiPhoto() {
 }
 
 
+loadRandomMichis();
+loadFavouriteMichis();
+
+
 const button = document.querySelector('.header-mainButton');
 const menu = document.querySelector('.nav-menu');
 
 button.addEventListener('click', ()=> {
     menu.classList.toggle('nav-menu_visible')
 })
-
-
-
-loadRandomMichis();
-loadFavouriteMichis();
