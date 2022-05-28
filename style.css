@@ -14,6 +14,8 @@ body{
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 :root{
@@ -24,44 +26,85 @@ body{
 }
 
 
-#navbarSupportedContent{
-    background-color: red;
-}
+
 
 .header{
+    display: flex;
+    justify-content: space-between;
     background-color: var(--colorA);
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
     width: 100%;
+    
+    
 
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
+.cajatit{
+    
+    text-align: center;
+}
+
+h1 {
     margin: 0 auto;
+    
+    text-align: center;
+    font-size: 5.2rem;
+    
+    
 }
-.nav-link{
-    color: white;
-    text-decoration: none;
+
+.header-mainButton{
+    border: none;
+    font-size: 42px;
+    background: none;
+    cursor: pointer;
+    color: var(--colorC);
+    display: none;
+    
+}
+
+.nav-menu{
+    
+    display: flex;
+    list-style: none;
+    font-size: 1.8rem;
+    align-items: center;
+    color: var(--colorC);
+    font-weight: bold;
+}
+
+.nav-menu li{
+    margin: 6px;
+    cursor: pointer;
+}
+
+.nav-menu li:hover{
+    color: var(--colorB);
 }
 
 .portfolio{
-    width: 100px;
+    
+    
+    left: 12px;
+    
     display: flex;
     flex-direction: column;
     text-align: center;
     
+    
+    
 }
 
+
+
 .logo{
+    
     width: 60px;
     height: 60px;
 }
 
 .text-pf{
-    text-align: center;
+    
     font-weight: 800;
     font-size: 1.5rem;
 }
@@ -70,10 +113,7 @@ body{
     background-color: var(--colorB);
 }
 
-h1 {
-    font-size: 4.8rem;
-    text-align: center;
-}
+
 
 section h2{
     font-size: 3.2rem;
@@ -149,6 +189,7 @@ img{
     display: flex;
     gap: 20px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .bbb{
@@ -229,7 +270,7 @@ img{
     margin: 50px;
     display: flex;
     flex-direction: column;
-    background-color: var(--colorA);
+    background-color: #4785ae;
     border-radius: 20px;
     
 }
@@ -332,12 +373,16 @@ img{
     font-size: 2.6rem;
     color: white;
     background-color: var(--colorA);
-    position: absolute;
+    margin: 0 auto;
+    /* position: absolute;
     margin-left: 415px;
-    margin-top: 260px;
+    margin-top: 260px; */
     cursor: pointer;
 
 }
+
+
+
 
 #favoriteMichis article button:hover{
     background-color: var(--colorD);
@@ -360,21 +405,67 @@ img{
 }
 
 
+@media screen and (max-width: 1143px) {
+    .portfolio{
+        display: none;
+    }
+    
+}
+
+
+    
+    
+    
+
+
+/*tablet*/
+
+@media screen and (max-width: 1080px){
+    
 
 
 
 
+    .nav-menu{
+        position: fixed;
+        background-color: black;
+        flex-direction: column;
+        margin-top: 68px;
+        height: calc(100% - 68px);
+        width: 100%;
+        right: 100%;
+        transition: right 0.3s;
+    }
 
-@media screen and (min-width: 360px) and (max-width: 740px){
+    .nav-menu_visible {
+        right: 0;
+      }
+
+
+    .nav-menu li{
+        margin: 26px;
+        font-size: 2.8rem;
+    }
+
+    .header-mainButton{
+        display: block;
+    }
+
+    .header-mainButton:hover{
+        color: #0f1d27;
+        transition: .4s;
+    }
     
 
     .pages{
         display: none;
     }
 
-    
+    .header{
+        justify-content: space-around;
+    }
 
-    header h1{
+    .header h1{
         font-size: 2.8rem;
         text-align: center;
         margin: 16px auto;
@@ -411,25 +502,14 @@ img{
         display: none;
     }
     
+
+    
+
+
     #randomDogs{
         margin-bottom: 180px;
     }
 
-    
-
-    
-
-    /* #favoriteMichis{
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-columns: auto;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-auto-rows: auto;
-        background-image: url(https://previews.123rf.com/images/evgeniyam/evgeniyam1710/evgeniyam171000147/88063542-un-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-azul-.jpg?fj=1);
-        border-radius: 10px;
-        border: 3px solid black; */
 
     #favoriteMichis{
         grid-template-columns: 1fr 1fr;
@@ -437,98 +517,137 @@ img{
     }
 
     #img1, #img2, #img3, #img4{
-        width: 150px;
-        height: 150px;
+        width: 320px;
+        height: 320px;
     }
 
-    /* .aaa{
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
     
-    .bbb{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        
-    } */
 
     .aaa{
         display: grid;
 	    grid-template-columns: 1fr 1fr;
-	    grid-column-gap: 6px;
-	    grid-row-gap: 20px;
+	    grid-column-gap: 2px;
+	    grid-row-gap: 30px;
 	    grid-auto-rows: auto;
-        gap: 5px;
+        
         
         
         
     }
 
     .bbb{
-        width: 150px;
+        margin-right: 80px;
+        width: 250px;
         justify-self: center;
         
     }
 
 
-    /* background-color: var(--colorC);
-    color: black; 
-    width: 200px;
-    padding: 10px;
-    border: 2px solid var(--colorA);
-    border-radius: 15px;
-    margin-left: 25px;
     
-    font-weight: 800; */
 
     .bbb button{
         width: 150px;
-        margin-left: 0;
+        margin-left: 86px;
         padding: 3px;
     }
 
-    /* #uploadingMichi {
-        height: 400px;
-        margin: 50px;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--colorA);
-        border-radius: 20px; */
+    
         
 
-        #uploadingMichi{
-            height: 500px;
+    #uploadingMichi{
+        margin-top: 550px;
+        height: 400px;
         }
 
-        #uploadingMichi h3{
-            margin-left: 40px;
+    #uploadingMichi h3{
+        
+        margin-left: 40px;
         }
 
-        img{
+    img{
     
-            height: 150px;
-            width: 150px;
-            margin: 0 auto;
+        height: 260px;
+        width: 260px;
+        margin: 0 auto;
             
         }
-
-
-        
-
-        
-
-
-
-
-
-
-
-
-
 
 
 
 
 }
+
+
+
+/*celu*/
+
+@media screen and (max-width: 767px) {
+
+
+
+
+    .aaa{
+        
+	    display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-column-gap: 2px;
+        grid-row-gap: 30px;
+        grid-auto-rows: auto;
+        margin-left: 45px;
+        
+        
+        
+        
+    }
+
+    #img1, #img2, #img3, #img4{
+        width: 240px;
+        height: 240px;
+    }
+
+
+    img{
+        width: 240px;
+        height: 240px;
+    }
+
+
+
+    #uploadingMichi{
+        margin-top: 350px;
+    }
+
+    
+    /* #img1, #img2, #img3, #img4{
+        width: 120px;
+        height: 120px;
+    } */
+
+    
+
+    
+        
+    }
+
+
+    
+
+
+/* #img1, #img2, #img3, #img4{
+    width: 320px;
+    height: 320px;
+}
+
+
+
+.aaa{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 30px;
+    grid-auto-rows: auto;
+    
+    
+    
+    
+} */
