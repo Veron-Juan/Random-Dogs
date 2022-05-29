@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,900&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&family=Roboto:ital,wght@0,100;1,400&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/73128adacf.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 600px)"> -->
     
 </head>
 <body>
@@ -25,7 +26,7 @@
             <p class="text-pf">PORTFOLIO</p>
         </div>
         
-        <div class="cajatit">
+        <div class="header-title">
             <h1 >Welcome to Random Dogs🐶</h1>
         </div>
         
@@ -33,8 +34,9 @@
         <button class="header-mainButton"><i class="fas fa-solid fa-bars"></i></button>
 
         <ul class="nav-menu">
-            <li>Favorites</li>
-            <li>Upload</li>
+            
+            <li><a href="#title-favorites">Favorites</a></li>
+            <li>Upload </li>
             <li>This repository</li>
             <li>About me</li>
 
@@ -80,6 +82,10 @@
            
     
         <button class="getrandom" onclick="loadRandomMichis()">Show more dogs</button>
+
+            
+
+
         </section>
     
     
@@ -95,7 +101,7 @@
                 <button type="button" onclick="uploadMichiPhoto()">upload photo</button>
             </form>
         </section>
-        <h2 class="sect-favorites">Section favorites ⭐</h2>
+        <h2 id="title-favorites" class="sect-favorites">Section favorites ⭐</h2>
 
         <section id="favoriteMichis">
             

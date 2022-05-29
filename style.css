@@ -25,8 +25,7 @@ body{
     --colorD: #e65c4f;
 }
 
-
-
+/*Desktop*/
 
 .header{
     display: flex;
@@ -34,12 +33,21 @@ body{
     background-color: var(--colorA);
     position: fixed;
     width: 100%;
-    
-    
-
 }
 
-.cajatit{
+.portfolio{
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+
+.logo{ 
+    width: 60px;
+    height: 60px;
+}
+
+.header-title{
     
     text-align: center;
 }
@@ -82,26 +90,7 @@ h1 {
     color: var(--colorB);
 }
 
-.portfolio{
-    
-    
-    left: 12px;
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    
-    
-    
-}
 
-
-
-.logo{
-    
-    width: 60px;
-    height: 60px;
-}
 
 .text-pf{
     
