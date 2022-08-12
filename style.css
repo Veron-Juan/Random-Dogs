@@ -6,14 +6,11 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'Barlow', sans-serif;
-    font-family: 'DM Sans', sans-serif;
     font-family: 'Inter', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
     width: 100%;
     overflow-x: hidden;
 }
@@ -27,50 +24,72 @@ body{
 
 /*Desktop*/
 
+body{
+    background-color: var(--colorB);
+}
 .header{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
     background-color: var(--colorA);
     position: fixed;
+    height: 90px;
     width: 100%;
 }
 
-.portfolio{
-    left: 12px;
-    display: flex;
-    flex-direction: column;
-    text-align: center; 
-}
-
 .logo{ 
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    margin: 10px 0 0 40px;
+    object-fit: contain;
 }
-
 .header-title{
-    
-    text-align: center;
-}
-
-h1 {
     margin: 0 auto;
-    
-    text-align: center;
-    font-size: 5.2rem;
-    
-    
+    font-size: 4.4rem;
+    color: var(--colorC);
 }
-
 .header-mainButton{
     border: none;
+    margin-right: 18px;
     font-size: 42px;
     background: none;
     cursor: pointer;
     color: var(--colorC);
     display: none;
-    
 }
-
+.mainButton-nav {
+    background-color: #0f1d27;
+    position: absolute;
+    top: 90px;
+    right: 0%;
+    width: 80%;
+    height: 100vh;
+    opacity: .97;
+    display: flex;
+    justify-content: center;
+    display: none;
+    transition: all .4s;
+}
+.on{
+    display: block;
+}
+.mainButton-ul{
+    margin-top: 100px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.mainButton-ul li a{
+    text-decoration: none;
+    color: var(--colorC); 
+}
+.mainButton-ul li a:hover{
+    color: var(--colorB);
+}
+.on{
+    display: block;
+}
 .nav-menu{
     
     display: flex;
@@ -79,37 +98,35 @@ h1 {
     align-items: center;
     color: var(--colorC);
     font-weight: bold;
+    margin-right: 40px;
 }
-
 .nav-menu li{
     margin: 6px;
     cursor: pointer;
 }
-
-.nav-menu li:hover{
-    color: var(--colorB);
+.nav-menu li a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--colorC);
 }
 
-
-
+.nav-menu li a:hover{
+    color: var(--colorB);
+}
 .text-pf{
     
     font-weight: 800;
     font-size: 1.5rem;
 }
-
 .container{
     background-color: var(--colorB);
 }
-
-
 
 section h2{
     font-size: 3.2rem;
     text-align: center;
     margin: 5px;
 }
-
 
 #img1, #img2, #img3, #img4{
     display: flex;
@@ -121,7 +138,6 @@ section h2{
     border-radius: 12px;
     box-shadow: 6px 6px 6px #999;
     cursor: pointer;
-
 }
 
 #img1:hover{
@@ -131,7 +147,6 @@ section h2{
 	transform: translateY(4px);
     transition: all 0.3s ease 0s;
 }
-
 #img2:hover{
     box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
 	border-bottom:1px solid #0045A6;
@@ -139,7 +154,6 @@ section h2{
 	transform: translateY(4px);
     transition: all 0.3s ease 0s;
 }
-
 #img3:hover{
     box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
 	border-bottom:1px solid #0045A6;
@@ -155,75 +169,48 @@ section h2{
 	transform: translateY(4px);
     transition: all 0.3s ease 0s;
 }
-
-
-    
-
 img{
-    
     height: 300px;
     width: 300px;
     margin: 0 auto;
-    
 }
-
-
-
-
-
-
-
-
 .aaa{
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 30px;
 }
-
 .bbb{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
-    
 }
-
 .bbb button{
-    
     background-color: var(--colorC);
     color: black; 
     width: 200px;
     padding: 10px;
     border: 2px solid var(--colorA);
     border-radius: 15px;
-    margin-left: 25px;
-    
     font-weight: 800;
-    
 }
-
 .bbb button:hover{
     background-color: #008CBA;
     color: white;
     cursor: pointer;
     transition: .3s;
 }
-
-
 #randomDogs{
-    
     height: 500px;
     display: flex;
     flex-direction: column;
-    
-    
 }
-
 #randomDogs h2{
     color: black;
     margin: 25px;
 }
-
 .getrandom{
     display: flex;
     margin: 20px auto;
@@ -241,38 +228,26 @@ img{
     transition: all 0.2s ease 0s;
     width: 150px;
     font-weight: 700;
-
-
 }
-
 .getrandom:hover{
     background: #0096f7;
 }
-
-
-
-
-
-
 #uploadingMichi {
     height: 400px;
     margin: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #4785ae;
     border-radius: 20px;
-    
 }
-
 #uploadingMichi:hover{
     background-color: #2D5A79;
     transition: .6s;
 }
-
 #uploadingMichi h2{
     font-weight: 800;
 }
-
 #uploadingMichi h3{
     margin: 10px;
     font-weight: 700;
@@ -283,27 +258,17 @@ img{
     width: 200px;
     height: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-
 }
 
 #uploadingForm{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    height: 400px;
-    
 }
-
-
-
 #uploadingForm input{
     margin-top: 10px;
 }
-
-
-
 #uploadingForm button{
-    
     background-color: var(--colorD);
     width: 100px;
     height: 35px;
@@ -312,34 +277,32 @@ img{
     font-weight: 700;
     margin: 2px 5px;
     cursor: pointer;
-    
-    
-    
 }
-
 #uploadingForm button:hover{
     background-color: #CF4538;
 }
-
-
-
 .sect-favorites{
     font-size: 5.6rem;
     text-align: center;
 }
-
 #favoriteMichis{
     margin-top: 10px;
-    display: grid;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    /* display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
     grid-auto-columns: auto;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	grid-auto-rows: auto;
+	grid-auto-rows: auto; */
     background-image: url(https://previews.123rf.com/images/evgeniyam/evgeniyam1710/evgeniyam171000147/88063542-un-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-azul-.jpg?fj=1);
     border-radius: 10px;
     border: 3px solid black;
-    
     
 }
 
@@ -348,13 +311,11 @@ img{
     border: 4px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-
 #favoriteMichis article{
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-
 #favoriteMichis article button{
     width: 40px;
     height: 40px;
@@ -369,31 +330,25 @@ img{
     cursor: pointer;
 
 }
-
-
-
-
 #favoriteMichis article button:hover{
     background-color: var(--colorD);
     color: white;
     
 }
-
-
 .footer{
     background-color: var(--colorA);
     width: 100%;
-    height: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
-
-.footer{
+.footer p{
     color: white;
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-align: center;
 }
-
-
 @media screen and (max-width: 1143px) {
     .portfolio{
         display: none;
@@ -401,42 +356,21 @@ img{
     
 }
 
-
-    
-    
-    
-
-
 /*tablet*/
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1113px){
     
 
-
-
-
     .nav-menu{
-        position: fixed;
-        background-color: black;
-        flex-direction: column;
-        margin-top: 68px;
-        height: calc(100% - 68px);
-        width: 100%;
-        right: 100%;
-        transition: right 0.3s;
+        display: none;
     }
-
-    .nav-menu_visible {
-        right: 0;
-      }
-
 
     .nav-menu li{
         margin: 26px;
         font-size: 2.8rem;
     }
 
-    .header-mainButton{
+    .header-mainButton {
         display: block;
     }
 
@@ -445,23 +379,15 @@ img{
         transition: .4s;
     }
     
-
     .pages{
         display: none;
     }
 
-    .header{
-        justify-content: space-around;
-    }
-
-    .header h1{
+    .header-title{
         font-size: 2.8rem;
         text-align: center;
         margin: 16px auto;
-        
-        
     }
-
 
     .navbar{
         display: flex;
@@ -471,7 +397,6 @@ img{
         margin-left: 8px;
         display: flex;
         
-        
     }
 
     .navbar:hover{
@@ -479,69 +404,25 @@ img{
     }
 
     .navbar img{
-        
         width: 62px;
         height: 62px;
         margin-top: 8px;
         
     }
     
-
-    .portfolio{
-        display: none;
-    }
-    
-
-    
-
-
     #randomDogs{
         margin-bottom: 180px;
-    }
-
-
-    #favoriteMichis{
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 8px;
     }
 
     #img1, #img2, #img3, #img4{
         width: 320px;
         height: 320px;
     }
-
-    
-
     .aaa{
-        display: grid;
-	    grid-template-columns: 1fr 1fr;
-	    grid-column-gap: 2px;
-	    grid-row-gap: 30px;
-	    grid-auto-rows: auto;
-        
-        
-        
+        flex-wrap: wrap;
+        gap: 50px; 
         
     }
-
-    .bbb{
-        margin-right: 80px;
-        width: 250px;
-        justify-self: center;
-        
-    }
-
-
-    
-
-    .bbb button{
-        width: 150px;
-        margin-left: 86px;
-        padding: 3px;
-    }
-
-    
-        
 
     #uploadingMichi{
         margin-top: 550px;
@@ -557,36 +438,30 @@ img{
     
         height: 260px;
         width: 260px;
-        margin: 0 auto;
             
         }
 
 
-
+    .sect-favorites{
+        font-size: 3.5rem;
+    }
 
 }
 
 
-
-/*celu*/
+/*cel*/
 
 @media screen and (max-width: 767px) {
-
-
-
-
     .aaa{
-        
-	    display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-column-gap: 2px;
-        grid-row-gap: 30px;
-        grid-auto-rows: auto;
-        margin-left: 45px;
+        align-items: center;
         
         
-        
-        
+    }
+    .bbb{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #img1, #img2, #img3, #img4{
@@ -599,44 +474,54 @@ img{
         width: 240px;
         height: 240px;
     }
-
+    
 
 
     #uploadingMichi{
-        margin-top: 350px;
+        margin-top: 400px;
     }
 
-    
-    /* #img1, #img2, #img3, #img4{
-        width: 120px;
-        height: 120px;
-    } */
-
-    
-
-    
         
     }
 
+    @media screen and (max-width: 639px){
+        .logo{
+            display: none;
+        }
+    } 
+    
+    @media screen and (max-width: 568px){
+        #uploadingMichi{
+            margin-top: 1100px;
+        }
+        #uploadingMichi h3{
+            display: none;
+        }
+        #favoriteMichis{
+            gap: 10px;
+        }
+        #uploadingMichi h2{
+            font-size: 22px;
+
+        }
+        
+    }
+
+    @media screen and (max-width: 509px){
+        #uploadingForm{
+            width: 210px;
+        }
+        .header-title{
+            font-size: 2.1rem !important;
+
+        }
+    }
 
     
 
 
-/* #img1, #img2, #img3, #img4{
-    width: 320px;
-    height: 320px;
-}
+
+    
 
 
 
-.aaa{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2px;
-    grid-row-gap: 30px;
-    grid-auto-rows: auto;
-    
-    
-    
-    
-} */

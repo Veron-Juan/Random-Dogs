@@ -166,8 +166,8 @@ loadFavouriteMichis();
 
 
 const button = document.querySelector('.header-mainButton');
-const menu = document.querySelector('.nav-menu');
+const menu = document.querySelector('.mainButton-nav');
 
 button.addEventListener('click', ()=> {
-    menu.classList.toggle('nav-menu_visible')
+    menu.classList.toggle('on')
 })
